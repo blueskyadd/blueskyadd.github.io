@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>前端网络 | 飞猫</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="网络相关的知识也是面试时经常会被问到的问题，面试官很有必要确认面试者是否只会使用$.ajax()方法，还是真正了解网络请求的原理。问题列表   get和post的区别 websocket是否了解 http 2.0对于http 1.x有哪些优点？ jq的ajax返回值是什么？ 说一说你知道的HTTP状态码 jsonp的原理 跨域请求资源有哪几种方式？他们的优缺点是什么？ XML和JSON的区别？">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端网络">
+<meta property="og:url" content="39.98.222.100/2021/01/12/前端网络/index.html">
+<meta property="og:site_name" content="飞猫">
+<meta property="og:description" content="网络相关的知识也是面试时经常会被问到的问题，面试官很有必要确认面试者是否只会使用$.ajax()方法，还是真正了解网络请求的原理。问题列表   get和post的区别 websocket是否了解 http 2.0对于http 1.x有哪些优点？ jq的ajax返回值是什么？ 说一说你知道的HTTP状态码 jsonp的原理 跨域请求资源有哪几种方式？他们的优缺点是什么？ XML和JSON的区别？">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2021-03-17T10:48:36.184Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="前端网络">
+<meta name="twitter:description" content="网络相关的知识也是面试时经常会被问到的问题，面试官很有必要确认面试者是否只会使用$.ajax()方法，还是真正了解网络请求的原理。问题列表   get和post的区别 websocket是否了解 http 2.0对于http 1.x有哪些优点？ jq的ajax返回值是什么？ 说一说你知道的HTTP状态码 jsonp的原理 跨域请求资源有哪几种方式？他们的优缺点是什么？ XML和JSON的区别？">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+<link rel="alternate" href="/atom.xml" title="飞猫" type="application/atom+xml">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">飞猫</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/tags">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="39.98.222.100"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-前端网络" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/01/12/前端网络/" class="article-date">
+  <time datetime="2021-01-12T09:47:03.000Z" itemprop="datePublished">2021-01-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      前端网络
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>网络相关的知识也是面试时经常会被问到的问题，面试官很有必要确认面试者是否只会使用$.ajax()方法，还是真正了解网络请求的原理。问题列表</p>
+</blockquote>
+<ol>
+<li>get和post的区别</li>
+<li>websocket是否了解</li>
+<li>http 2.0对于http 1.x有哪些优点？</li>
+<li>jq的ajax返回值是什么？</li>
+<li>说一说你知道的HTTP状态码</li>
+<li>jsonp的原理</li>
+<li>跨域请求资源有哪几种方式？他们的优缺点是什么？</li>
+<li>XML和JSON的区别？<a id="more"></a>
+<h3 id="1-get和post的区别"><a href="#1-get和post的区别" class="headerlink" title="1. get和post的区别"></a><div style="padding-left: 1em; margin: 1em 0px; border-left: 4px solid rgb(211, 211, 211); letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);"><span style="color: rgb(133, 144, 166);">1. get和post的区别</span></div></h3>get和post的区别这题看上很简单，你肯定能答出1个以上的区别，但是面试官往往期望你能答出更多更深层次的区别。这篇文章写的很详细了，大家可以研究一下——<a href="https://www.zhihu.com/question/28586791" target="_blank" rel="noopener">https://www.zhihu.com/question/28586791</a><br><br>我在这里在概括一下：<br><strong>初级的答案</strong><br>因为GET方法请求的参数都是放在请求的url上的，所以它与POST有以下明显的区别：</li>
+</ol>
+<ul>
+<li>GET请求可以被添加到书签中，也可保存在浏览器历史记录中，POST不能</li>
+<li>GET请求可以被浏览器缓存，POST不能</li>
+<li>GET请求收到URL长度限制，所以数据长度也受限制，POST不会</li>
+<li>GET请求只能传输ASCII字符，而POST不受此限制，还可以传输二进制数据</li>
+</ul>
+<p>在语义上两个方法也有区别：</p>
+<ul>
+<li>GET 代表获取指定服务器上资源</li>
+<li>POST 代表向指定的资源提交要被处理的数据</li>
+</ul>
+<p><strong>高级些的答案</strong><br>GET产生一个TCP数据包；POST产生两个TCP数据包。<br>对于GET方式的请求，浏览器会把http header和data一并发送出去，服务器响应200（返回数据）；<br>而对于POST，浏览器先发送header，服务器响应100 continue，浏览器再发送data，服务器响应200 ok（返回数据）。<br>也就是说，GET只需要汽车跑一趟就把货送到了，而POST得跑两趟，第一趟，先去和服务器打个招呼“嗨，我等下要送一批货来，你们打开门迎接我”，然后再回头把货送过去。<br><br>但是需要多解释两句的是：</p>
+<ul>
+<li>据研究，在网络环境好的情况下，发一次包的时间和发两次包的时间差别基本可以无视。而在网络环境差的情况下，两次包的TCP在验证数据包完整性上，有非常大的优点。</li>
+<li>并不是所有浏览器都会在POST中发送两次包，Firefox就只发送一次。</li>
+</ul>
+<h3 id="2-websocket是否了解？"><a href="#2-websocket是否了解？" class="headerlink" title="2.websocket是否了解？"></a><div style="padding-left: 1em; margin: 1em 0px; border-left: 4px solid rgb(211, 211, 211); letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);"><span style="color: rgb(133, 144, 166);">2.websocket是否了解？</span></div></h3><p>通常情况下，面试官问你是否对XX有了解，一般的回答都是要涵盖下面这些点：<br></p>
+<ul>
+<li>是否知道它是什么？</li>
+<li>是否知道它的用途是什么？</li>
+<li>它和之前某项已有的技术相比，有哪些优缺点？</li>
+</ul>
+<p>webSocket和http一样，同属于应用层协议。它最重要的用途是实现了客户端与服务端之间的全双工通信，当服务端数据变化时，可以第一时间通知到客户端。除此之外，它与http协议不同的地方还有：<br></p>
+<ul>
+<li>http只能由客户端发起，而webSocket是双向的。</li>
+<li>webSocket传输的数据包相对于http而言很小，很适合移动端使用</li>
+<li>没有同源限制，可以跨域共享资源</li>
+</ul>
+<p>要想了解更多详细，还是去看阮一峰的教程吧——WebSocket 教程 - 阮一峰的网络日志</p>
+<h3 id="3-http-2-0对于http-1-x有哪些优点？"><a href="#3-http-2-0对于http-1-x有哪些优点？" class="headerlink" title="3.http 2.0对于http 1.x有哪些优点？"></a><div style="padding-left: 1em; margin: 1em 0px; border-left: 4px solid rgb(211, 211, 211); letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);"><span style="color: rgb(133, 144, 166);">3.http 2.0对于http 1.x有哪些优点？</span></div></h3><p>优点（以下摘自HTTP/2.0 相比1.0有哪些重大改进？）：<br></p>
+<ul>
+<li>多路复用：多路复用允许同时通过单一的 HTTP/2 连接发起多重的请求-响应消息。由于http 1.x的时代中，浏览器向同一域名下发送的http请求数量是受限的，当超出数量限制时，请求会被阻塞，大大降低了用户体验。而HTTP/2 的多路复用允许同时通过单一的 HTTP/2 连接发起多重的请求-响应消息。</li>
+<li>二进制分帧：HTTP/2在应用层和传输层之间追加了一个二进制分帧层，最终使得多个数据流共用一个连接，更加高效的使用tcp连接。从而使得服务器的连接压力减轻，降低了内存的消耗，增大了网络的吞吐量。</li>
+<li>首部压缩：HTTP/2引入了HPACK算法对头部进行压缩，大大减小了数据发送的字节数。</li>
+</ul>
+<h3 id="4-jQuery的ajax返回值是什么？"><a href="#4-jQuery的ajax返回值是什么？" class="headerlink" title="4.jQuery的ajax返回值是什么？"></a><div style="padding-left: 1em; margin: 1em 0px; border-left: 4px solid rgb(211, 211, 211); letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);"><span style="color: rgb(133, 144, 166);">4.jQuery的ajax返回值是什么？</span></div></h3><p>很多公司，尤其是金融或数据分析的公司，他们的web app会与服务端进行大量的数据交互，所以他们的面试官通常会很看重面试者对于网络请求以及异步编程的理解程度。<br><br>jQuery中的ajax大家很常用，以至于绝大部分人把他认为是“理所应当”，而忽略了他的底层逻辑和实现原理。$.ajax()方法返回的是一个延迟对象，即$.Deferred的实例。<br><br>所以你可以像下面这样使用$.ajax()方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">//利用done()和fail()方法来处理ajax请求</span><br><span class="line">$.ajax(&#123;url:&quot;http://mydomain.com/memberInfo/get&quot;,async: false&#125;).done(</span><br><span class="line">	responseData =&gt; &#123;</span><br><span class="line">		console.log(responseData)</span><br><span class="line">	&#125;</span><br><span class="line">).fail(</span><br><span class="line">	()=&gt;&#123;console.error(&apos;出错了！&apos;)&#125;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">//$.get()也是同样的道理，除了上面延迟对象提供的方法外，还可以使用then()回调</span><br><span class="line">$.get(&quot;http://mydomain.com/memberInfo/get&quot;).then(responseData =&gt; &#123;console.log(responseData);&#125;)</span><br></pre></td></tr></table></figure></p>
+<p>如果你想让这两个请求都完成后再进行处理的话，可以用下面的操作：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var memberDef = $.get(&quot;http://mydomain.com/memberInfo/get&quot;);</span><br><span class="line"></span><br><span class="line">var orderDef = $.get(&quot;http://mydomain.com/orderInfo/get&quot;);</span><br><span class="line"></span><br><span class="line">$.when(memberDef, orderDef).then((</span><br><span class="line">	[memberInfo], [orderInfo]</span><br><span class="line">)=&gt;&#123;	</span><br><span class="line">	//这里用到了解构赋值来取得http返回的数据</span><br><span class="line">	console.log(&apos;用户信息&apos;,memberInfo);</span><br><span class="line">	console.log(&apos;订单信息&apos;,orderInfo);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<p>想要了解更多关于延迟对象的内容，可以访问阮一峰的博客除了上面这一个问题，还可以追问一些下面的问题，这里就不展开解答了：</p>
+<ul>
+<li>异步请求和同步请求的区别</li>
+<li>ajax 请求有几种数据格式，如何设置数据格式</li>
+<li>如何避免浏览器缓存get请求，以便达到每次get请求都能获取最新的数据</li>
+<li>等等……</li>
+</ul>
+<h3 id="5-说一说你知道的HTTP状态码"><a href="#5-说一说你知道的HTTP状态码" class="headerlink" title="5.说一说你知道的HTTP状态码"></a><div style="padding-left: 1em; margin: 1em 0px; border-left: 4px solid rgb(211, 211, 211); letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);"><span style="color: rgb(133, 144, 166);">5.说一说你知道的HTTP状态码</span></div></h3><p>以前遇到面试者说 HTTP状态码不应该是前端开发关心的事情。但我总觉得一个前端工程师对于http状态码的了解程度代表了他曾经踩过了多少雷，一个深入了解http状态码的工程师可以快速定位问题。</p>
+<p>关于HTTP状态码应该有下面的基本认识：</p>
+<ul>
+<li>1xx ：1开头的状态码表示临时的响应</li>
+<li>2xx ：请求成功</li>
+<li>3xx ：请求被重定向</li>
+<li>4xx ：请求错误，表明客户端发送的请求有问题</li>
+<li>5xx ：服务器错误，表明服务端在处理请求时发生了错误</li>
+</ul>
+<p>知道上面的规律，再看到错误的时候就大概知道问题是后端的锅还是前端的锅了。再说几个常用的http状态码（如果有兴趣了解详细的话还是自己去找吧，网上很多（<a href="http://tools.jb51.net/table/http_status_code））：" target="_blank" rel="noopener">http://tools.jb51.net/table/http_status_code））：</a></p>
+<pre><code>* 301 ： Moved Permanently 客户端请求的文档在其他地方，新的URL在location头中给出
+* 304 ： Not Modified 客户端有缓存的文档并发出了一个条件性的请求（一般是提供If-Modified-Since头表示客户端只想到指定日期后再更新文档）。服务器告诉客户，原来缓存的文档还可以继续使用。
+* 400 ： Bad Request 请求出现语法错误
+* 401 ： Unauthorized 访问被拒绝，客户端试图未经授权访问受密码保护的页面
+* 403 ： Forbidden 资源不可用。服务器理解客户的请求，但拒绝处理它。通常由于服务器文件或目录的权限设置导致。
+* 404 ： Not Found 无法找到指定位置的资源。
+* 405 ： Method Not Allowed 请求方法（GET、POST、PUT等）对指定的资源不适用，用来访问本资源的HTTP方法不被允许。
+* 500 ： Internal Server Error 服务器遇到了意料之外的情况，不能完成客户端的请求。
+* 502 ： Bad Gateway 服务器作为网管或者代理时收到了无效的响应。
+* 503 ： Service Unavailable 服务不可用，服务器由于维护或者负载过中未能应答。
+* 504 ： Gateway Timeout 网关超时， 作为代理或网关的服务器不能及时的应答。
+</code></pre><h3 id="6-JSONP的原理JSONP是一种跨域共享资源的方法。"><a href="#6-JSONP的原理JSONP是一种跨域共享资源的方法。" class="headerlink" title="6.JSONP的原理JSONP是一种跨域共享资源的方法。"></a><div style="padding-left: 1em; margin: 1em 0px; border-left: 4px solid rgb(211, 211, 211); letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);"><span style="color: rgb(133, 144, 166);">6.JSONP的原理JSONP是一种跨域共享资源的方法。</span></div></h3><p>很多人会好奇JSONP和JSON是什么关系，JSONP是JSON with padding的缩写，即填充式JSON或参数式JSON，是被包含在函数调用中的JSON，如下面的样子：</p>
+<p>callback({“name”: “Chong”});JSONP是通过动态<script>元素来实现的，使用时可以为src属性指定一个跨域URL。由于浏览器加载脚本是不受同源规则限制的，所以即使是跨域的URL同样可以发送请求。因为JSONP是有效的JavaScript代码，所以再请求完成后，即在JSONP响应加载到页面中以后，就会立即执行。示例代码：function handleResponse(response){alert(“您的IP地址是 “ + response.ip);}var script = document.createElement(“script”);script.src = “<a href="http://freegeoip.net/json/?callback=handleResponse&quot;;document.body.insertBefore">http://freegeoip.net/json/?callback=handleResponse&quot;;document.body.insertBefore</a>(script, document.body.firstChild);所以总结一下JSONP的实现方式：</p>
+<pre><code>1. 向当前页面中动态插入一个&lt;script&gt;元素，src属性设置为请求地址，并在地址中指定好回调函数
+2. js代码中预先定义好jsonp的回调函数
+3. 请求完成后，会立即调用预先指定好的jsonp回调，并将数据以json的格式传递到回调中。
+</code></pre><p>JSONP之所以可以实现跨域，依赖的是下面的条件：</p>
+<pre><code>1. 浏览器请求脚本是不受同源规则限制的
+2. &lt;script&gt;元素加载完成的脚本会立即执行
+</code></pre><p>需要注意的是，JSONP是需要服务端配合的，因为JSONP返回的是一段代码。7.跨域请求资源有哪几种方式？他们的优缺点是什么？常见的跨域方式如下：</p>
+<pre><code>* JSONP
+* 图像Ping
+* CORS
+* Web Sockets
+</code></pre><p>一个一个说：JSONP优点：简单易用，浏览器支持好。缺点：</p>
+<pre><code>1. JSONP是从其他域中加载代码并执行，所以存在很多安全隐患，如果其他服务器在响应中夹带恶意代码的话，没有办法防范。
+2. JSONP难以确定请求失败的情况。HTML5中给&lt;script&gt;元素增加了一个onerror事件，但是还是有浏览器不支持。
+3. 只能发送GET请求
+</code></pre><p>图像Ping这是指通过请求图片的方式来跨域发送请求。优点：简单，兼容性好，不需要服务器做针对性处理。缺点：</p>
+<pre><code>1. 只能单向通信，即客户端发送信号给服务端，无法接收到服务端的回复
+2. 只能发送GET请求
+3. 容易被浏览器缓存请求，导致请求发送不出去。
+</code></pre><p>CORSCORS是Cross-Origin Resource Sharing的缩写，即跨域资源共享。CORS的基本思想就是使用自定义的HTTP头部让浏览器与服务器进行沟通，从而决定请求或响应是应该成功，还是应该失败。优点：功能强大缺点：</p>
+<pre><code>1. 需要服务端来配合实现（其实很简单~）
+2. IE必须IE10以上。。。
+</code></pre><p>WebSocket这个貌似就不用多说了，属于没用过也应该听过的一种技术。优点：</p>
+<pre><code>1. 双工通信，浏览器和服务器都可以发起请求
+2. 通信效率高，一次链接可以复用，省去反复的握手环节
+</code></pre><p>缺点：</p>
+<pre><code>1. 实现上较为复杂，包括客户端和服务端
+2. 浏览器支持问题
+</code></pre><p>还有很多其他的跨域方式，在这里就不说了8.XML和JSON的区别？XML是标准通用标记语言 (SGML) 的子集，而标签语言（如HTML）的好处就是易懂。优点：上手简单，非开发人员也可以快速上手（产品经理们很喜欢）。缺点：</p>
+<pre><code>1. XML多余的数据比较多，所以数据量大，传输时占用更多空间
+2. 客户端和服务端解析XML都要比较繁琐，需要大量代码
+</code></pre><p>JSON(JavaScript Object Notation, JS 对象标记) 是一种轻量级的数据交换格式。重点在轻上，结构与JavaScript中的Object类似。优点：</p>
+<pre><code>1. 数据量小，利于网络传输
+2. 方便解析，客户端和服务端都有基础的解析方法
+</code></pre><p>缺点：结构稍微有点复杂，非开发人员不容易上手（初学者需要去官网学习研究一下）</p>
+</script></p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="39.98.222.100/2021/01/12/前端网络/" data-id="ckn4dohnk0017ccu3igvrmdfi" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/07/15/vue/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">vue项目运行后，在IE浏览器打开，页面为空白</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/categories/">categories</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/tags/">tags</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Element-ui/">Element-ui</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Express/">Express</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/H5/">H5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HBuilder/">HBuilder</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/express/">express</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mongodb/">mongodb</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ts/">ts</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/">vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/微信/">微信</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/移动端/">移动端</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/Element-ui/" style="font-size: 10px;">Element-ui</a> <a href="/tags/Express/" style="font-size: 10px;">Express</a> <a href="/tags/H5/" style="font-size: 10px;">H5</a> <a href="/tags/HBuilder/" style="font-size: 10px;">HBuilder</a> <a href="/tags/express/" style="font-size: 10px;">express</a> <a href="/tags/mongodb/" style="font-size: 10px;">mongodb</a> <a href="/tags/node/" style="font-size: 20px;">node</a> <a href="/tags/ts/" style="font-size: 10px;">ts</a> <a href="/tags/vue/" style="font-size: 15px;">vue</a> <a href="/tags/微信/" style="font-size: 15px;">微信</a> <a href="/tags/移动端/" style="font-size: 15px;">移动端</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/01/12/前端网络/">前端网络</a>
+          </li>
+        
+          <li>
+            <a href="/2020/07/15/vue/">vue项目运行后，在IE浏览器打开，页面为空白</a>
+          </li>
+        
+          <li>
+            <a href="/2020/07/15/ts-interfaces/">TS - interfaces  初探</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/21/promise/">promise的简单理解</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/13/react基础（一）/">react基础（一）</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 火星上的飞猫<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/tags" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

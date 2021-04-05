@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>react基础（一） | 飞猫</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="写在前面的话 react 作为目前前端的主流框架，各大公司也都在使用。react是一套基于视图层的框架，核心库只关注于视图层，跟vue一致（vue参照了react）。react专注于组件化开发，使用jsx语法（javascript xml  – 类xml语法—-要求所有写的视图代码必须包含在同一个父级标签中—-vue中的template），内涵虚拟DOM（ 所有内容并不是一开始就写到了index.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="react基础（一）">
+<meta property="og:url" content="39.98.222.100/2020/04/13/react基础（一）/index.html">
+<meta property="og:site_name" content="飞猫">
+<meta property="og:description" content="写在前面的话 react 作为目前前端的主流框架，各大公司也都在使用。react是一套基于视图层的框架，核心库只关注于视图层，跟vue一致（vue参照了react）。react专注于组件化开发，使用jsx语法（javascript xml  – 类xml语法—-要求所有写的视图代码必须包含在同一个父级标签中—-vue中的template），内涵虚拟DOM（ 所有内容并不是一开始就写到了index.">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="39.98.222.100/2020/04/13/react基础（一）/%3Chttps://blueskyadd.github.io/myPicture/react/1.png">
+<meta property="og:updated_time" content="2021-03-17T10:52:02.997Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="react基础（一）">
+<meta name="twitter:description" content="写在前面的话 react 作为目前前端的主流框架，各大公司也都在使用。react是一套基于视图层的框架，核心库只关注于视图层，跟vue一致（vue参照了react）。react专注于组件化开发，使用jsx语法（javascript xml  – 类xml语法—-要求所有写的视图代码必须包含在同一个父级标签中—-vue中的template），内涵虚拟DOM（ 所有内容并不是一开始就写到了index.">
+<meta name="twitter:image" content="39.98.222.100/2020/04/13/react基础（一）/%3Chttps://blueskyadd.github.io/myPicture/react/1.png">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+<link rel="alternate" href="/atom.xml" title="飞猫" type="application/atom+xml">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">飞猫</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/tags">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="39.98.222.100"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-react基础（一）" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/04/13/react基础（一）/" class="article-date">
+  <time datetime="2020-04-13T05:17:41.000Z" itemprop="datePublished">2020-04-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      react基础（一）
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="写在前面的话"><a href="#写在前面的话" class="headerlink" title="写在前面的话"></a>写在前面的话</h4><blockquote>
+<p>react 作为目前前端的主流框架，各大公司也都在使用。react是一套基于视图层的框架，核心库只关注于视图层，跟vue一致（vue参照了react）。react专注于组件化开发，使用jsx语法（javascript xml  – 类xml语法—-要求所有写的视图代码必须包含在同一个父级标签中—-vue中的template），内涵虚拟DOM（ 所有内容并不是一开始就写到了index.html中，使用jsx语法构建，最后渲染到了index.html页面中），使用diff算法（ 状态的改变，会引起视图的二次渲染，比较状态树变化的算法），会比vue更加适合团队开发模式，以至于react成了一项必备技能。我个人其实是一直在使用vue，不过为了迎合市场也开始了react的学习之路，接下来我会将<strong>react</strong>、<strong>redux</strong>、<strong>react-router</strong>一步一步来进行整理。</p>
+</blockquote>
+<!-- <img src="./img/backgroundImg/4.jpg" width="850" hegiht="313" align=center /> -->
+<h3>01-构建项目</h3>
+
+<h4 id="01-1-create-react-app-快速构建项目"><a href="#01-1-create-react-app-快速构建项目" class="headerlink" title="01-1 create-react-app 快速构建项目"></a>01-1 create-react-app 快速构建项目</h4><h5 id="creat-react-app优点"><a href="#creat-react-app优点" class="headerlink" title="creat-react-app优点"></a>creat-react-app优点</h5><ul>
+<li>无需配置：官方的配置堪称完美，几乎不用你再配置任何东西，就可以上手开发项目。</li>
+<li>高集成性：集成了对React，JSX，ES6和Flow的支持。</li>
+<li>自带服务：集成了开发服务器，你可以实现开发预览一体化。</li>
+<li>热更新：保存自动更新，让你的开发更简单。</li>
+<li>全兼容性：自动处理CSS的兼容问题，无需添加-webkit前缀。</li>
+<li>自动发布：集成好了发布成品功能，编译后直接发布，并且包含了sourcemaps功能。</li>
+</ul>
+<h5 id="creat-react-app的安装"><a href="#creat-react-app的安装" class="headerlink" title="creat-react-app的安装"></a>creat-react-app的安装</h5><p> windows系统下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g create-react-app</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h5 id="创建react项目"><a href="#创建react项目" class="headerlink" title="创建react项目"></a>创建react项目</h5><p>安装完成后，就可以使用create-react-app来生成react项目的项目目录– projectName：项目名称</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create-react-app projectName</span><br></pre></td></tr></table></figure>
+<h5 id="启动项目"><a href="#启动项目" class="headerlink" title="启动项目"></a>启动项目</h5><p>然后进入到项目内 通过npm来安装项目依赖</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm start</span><br></pre></td></tr></table></figure>
+<h4 id="01-2-generator-react-webpack-快速构建项目"><a href="#01-2-generator-react-webpack-快速构建项目" class="headerlink" title="01-2 generator-react-webpack 快速构建项目"></a>01-2 generator-react-webpack 快速构建项目</h4><p>我也是第一次使用它，各种百度后发现它其实是基于webpack构建的，只不过是进一步完善了webpack，它可以支持ES6，并且集成了Babel-Loader等。简单来说使用它之后省去了我们自己手动配置webpack,对于我这种不熟悉webpack配置的小白来说极其方便。</p>
+<h5 id="generator-react-webpack优点"><a href="#generator-react-webpack优点" class="headerlink" title="generator-react-webpack优点"></a>generator-react-webpack优点</h5><ul>
+<li>基于webpack构建，可以很容易的配置自己需要的webpack。</li>
+<li>支持ES6，集成了Babel-Loader。</li>
+<li>支持不同风格的CSS（sass，less，stylus）。</li>
+<li>支持PostCSS转换样式。</li>
+<li>集成了esLint功能。</li>
+<li>可以轻松配置单元测试，比如Karma和Mocha</li>
+<li>包含热加载</li>
+</ul>
+<h5 id="generator-react-webpack的安装"><a href="#generator-react-webpack的安装" class="headerlink" title="generator-react-webpack的安装"></a>generator-react-webpack的安装</h5><h5 id="在全局安装yeoman-和-generator-react-webpack"><a href="#在全局安装yeoman-和-generator-react-webpack" class="headerlink" title="在全局安装yeoman  和 generator-react-webpack"></a>在全局安装yeoman  和 generator-react-webpack</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install -g yo</span><br><span class="line">npm install -g generator-react-webpack</span><br></pre></td></tr></table></figure>
+<h5 id="初始化项目目录，使用generator-react-webpack生成项目目录"><a href="#初始化项目目录，使用generator-react-webpack生成项目目录" class="headerlink" title="初始化项目目录，使用generator-react-webpack生成项目目录"></a>初始化项目目录，使用generator-react-webpack生成项目目录</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir react_demo</span><br><span class="line">cd react_deom</span><br><span class="line">yo react-webpack</span><br></pre></td></tr></table></figure>
+<h5 id="项目运行"><a href="#项目运行" class="headerlink" title="项目运行"></a>项目运行</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm start</span><br></pre></td></tr></table></figure>
+<h4 id="react项目目录介绍"><a href="#react项目目录介绍" class="headerlink" title="react项目目录介绍"></a>react项目目录介绍</h4><p><img src="<https://blueskyadd.github.io/myPicture/react/1.png" width="550" hegiht="313" align="center"> </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="39.98.222.100/2020/04/13/react基础（一）/" data-id="ckn4dohn3000mccu3pazh5t2d" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/04/21/promise/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          promise的简单理解
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/02/16/label/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Element-ui Cascader 级联选择器 同时返回 value 和 label</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/categories/">categories</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/tags/">tags</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Element-ui/">Element-ui</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Express/">Express</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/H5/">H5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HBuilder/">HBuilder</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/express/">express</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mongodb/">mongodb</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ts/">ts</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/">vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/微信/">微信</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/移动端/">移动端</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/Element-ui/" style="font-size: 10px;">Element-ui</a> <a href="/tags/Express/" style="font-size: 10px;">Express</a> <a href="/tags/H5/" style="font-size: 10px;">H5</a> <a href="/tags/HBuilder/" style="font-size: 10px;">HBuilder</a> <a href="/tags/express/" style="font-size: 10px;">express</a> <a href="/tags/mongodb/" style="font-size: 10px;">mongodb</a> <a href="/tags/node/" style="font-size: 20px;">node</a> <a href="/tags/ts/" style="font-size: 10px;">ts</a> <a href="/tags/vue/" style="font-size: 15px;">vue</a> <a href="/tags/微信/" style="font-size: 15px;">微信</a> <a href="/tags/移动端/" style="font-size: 15px;">移动端</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/01/12/前端网络/">前端网络</a>
+          </li>
+        
+          <li>
+            <a href="/2020/07/15/vue/">vue项目运行后，在IE浏览器打开，页面为空白</a>
+          </li>
+        
+          <li>
+            <a href="/2020/07/15/ts-interfaces/">TS - interfaces  初探</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/21/promise/">promise的简单理解</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/13/react基础（一）/">react基础（一）</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 火星上的飞猫<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/tags" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

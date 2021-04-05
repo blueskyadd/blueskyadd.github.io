@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>TS入门（二） | 飞猫</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="数据类型(1)布尔值（boolean ）1let isDone: boolean = false;   在 TypeScript 中，boolean 是 JavaScript 中的基本类型，而 Boolean 是 JavaScript 中的构造函数数值（number ）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TS入门（二）">
+<meta property="og:url" content="39.98.222.100/2019/05/31/typescriptTwo/index.html">
+<meta property="og:site_name" content="飞猫">
+<meta property="og:description" content="数据类型(1)布尔值（boolean ）1let isDone: boolean = false;   在 TypeScript 中，boolean 是 JavaScript 中的基本类型，而 Boolean 是 JavaScript 中的构造函数数值（number ）">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-12-23T09:26:51.027Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="TS入门（二）">
+<meta name="twitter:description" content="数据类型(1)布尔值（boolean ）1let isDone: boolean = false;   在 TypeScript 中，boolean 是 JavaScript 中的基本类型，而 Boolean 是 JavaScript 中的构造函数数值（number ）">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+<link rel="alternate" href="/atom.xml" title="飞猫" type="application/atom+xml">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">飞猫</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/tags">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="39.98.222.100"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-typescriptTwo" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/05/31/typescriptTwo/" class="article-date">
+  <time datetime="2019-05-31T10:40:13.441Z" itemprop="datePublished">2019-05-31</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      TS入门（二）
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h4><h5 id="1-布尔值（boolean-）"><a href="#1-布尔值（boolean-）" class="headerlink" title="(1)布尔值（boolean ）"></a>(1)布尔值（boolean ）</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> isDone: boolean = <span class="literal">false</span>;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p> 在 TypeScript 中，boolean 是 JavaScript 中的基本类型，而 Boolean 是 JavaScript 中的构造函数<br>数值（number ）<br><a id="more"></a></p>
+</blockquote>
+<h5 id="2-模板字符串"><a href="#2-模板字符串" class="headerlink" title="(2)模板字符串:"></a>(2)模板字符串:</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> sentence: string = <span class="string">`Hello, my name is <span class="subst">$&#123;myName&#125;</span>. I'll be <span class="subst">$&#123;myAge + <span class="number">1</span>&#125;</span> years old next month.`</span></span><br></pre></td></tr></table></figure>
+<p> 编译结果:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> sentence = <span class="string">"Hello, my name is "</span> + myName + <span class="string">".\nI'll be "</span> + (myAge + <span class="number">1</span>) + <span class="string">" years old next month."</span>;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>其中 ` 用来定义 ES6 中的模板字符串，${expr} 用来在模板字符串中嵌入表达式。</p>
+</blockquote>
+<h5 id="3-空值-Void-："><a href="#3-空值-Void-：" class="headerlink" title="(3)空值(Void )："></a>(3)空值(Void )：</h5><blockquote>
+<p>JavaScript 没有空值（Void）的概念，在 TypeScript 中，可以用 void 表示没有任何返回值的函数：<br>   声明一个 void 类型的变量没有什么用，因为你只能将它赋值为 undefined 和 null：</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> unusable: <span class="keyword">void</span> = <span class="literal">undefined</span>;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Null 和 Undefined：<blockquote>
+<p>undefined 类型的变量只能被赋值为 undefined，null 类型的变量只能被赋值为 null。</p>
+</blockquote>
+</li>
+</ul>
+<h5 id="4-任意值-Any"><a href="#4-任意值-Any" class="headerlink" title="(4)任意值(Any)"></a>(4)任意值(Any)</h5><ul>
+<li>来表示允许赋值为任意类型<blockquote>
+<p> 任意类型的理解：（如果是一个普通类型，在赋值过程中改变类型是不被允许的，但如果是 any 类型，则允许被赋值为任意类型。声明一个变量为任意值之后，对它的任何操作，返回的内容的类型都是任意值。—-变量如果在声明的时候，未指定其类型，那么它会被识别为任意值类型）</p>
+</blockquote>
+</li>
+</ul>
+<h5 id="类型推论（如果定义的时候没有赋值，不管之后有没有赋值，都会被推断成-any-类型而完全不被类型检查：）"><a href="#类型推论（如果定义的时候没有赋值，不管之后有没有赋值，都会被推断成-any-类型而完全不被类型检查：）" class="headerlink" title="类型推论（如果定义的时候没有赋值，不管之后有没有赋值，都会被推断成 any 类型而完全不被类型检查：）"></a>类型推论（如果定义的时候没有赋值，不管之后有没有赋值，都会被推断成 any 类型而完全不被类型检查：）</h5><h5 id="5-联合类型"><a href="#5-联合类型" class="headerlink" title="(5)联合类型"></a>(5)联合类型</h5><blockquote>
+<p>表示取值可以为多种类型中的一种。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> myFavoriteNumber: string | number;</span><br><span class="line">myFavoriteNumber = <span class="string">'seven'</span>;</span><br><span class="line">myFavoriteNumber = <span class="number">7</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h6 id="联合类型使用-分隔每个类型。"><a href="#联合类型使用-分隔每个类型。" class="headerlink" title="联合类型使用 | 分隔每个类型。"></a>联合类型使用 | 分隔每个类型。</h6><h5 id="6-对象的类型——接口"><a href="#6-对象的类型——接口" class="headerlink" title="(6)对象的类型——接口"></a>(6)对象的类型——接口</h5><ul>
+<li>接口<blockquote>
+<p>在面向对象语言中，接口（Interfaces）是一个很重要的概念，它是对行为的抽象，而具体如何行动需要由类（classes）去实现（implements）。</p>
+</blockquote>
+<h5 id="7-函数的类型"><a href="#7-函数的类型" class="headerlink" title="(7)函数的类型"></a>(7)函数的类型</h5>声明语句<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">x: number, y: number</span>): <span class="title">number</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> x + y;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<blockquote>
+</blockquote>
+<p>使用 declare 关键字来定义它的类型，帮助 TypeScript 判断我们传入的参数类型对不对：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">declare <span class="keyword">var</span> jQuery: <span class="function">(<span class="params">selector: string</span>) =&gt;</span> any;</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>（declare 定义的类型只会用于编译时的检查，编译结果中会被删除。）</p>
+</blockquote>
+<p>上例的编译结果是：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jQuery(<span class="string">'#foo'</span>);</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="39.98.222.100/2019/05/31/typescriptTwo/" data-id="ckn4dohne000yccu3l931lx0m" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/05/31/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          hexo Hello World
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/05/31/FirstNight/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">TS入门（一）</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/categories/">categories</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/tags/">tags</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Element-ui/">Element-ui</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Express/">Express</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/H5/">H5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HBuilder/">HBuilder</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/express/">express</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mongodb/">mongodb</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ts/">ts</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/">vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/微信/">微信</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/移动端/">移动端</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/Element-ui/" style="font-size: 10px;">Element-ui</a> <a href="/tags/Express/" style="font-size: 10px;">Express</a> <a href="/tags/H5/" style="font-size: 10px;">H5</a> <a href="/tags/HBuilder/" style="font-size: 10px;">HBuilder</a> <a href="/tags/express/" style="font-size: 10px;">express</a> <a href="/tags/mongodb/" style="font-size: 10px;">mongodb</a> <a href="/tags/node/" style="font-size: 20px;">node</a> <a href="/tags/ts/" style="font-size: 10px;">ts</a> <a href="/tags/vue/" style="font-size: 15px;">vue</a> <a href="/tags/微信/" style="font-size: 15px;">微信</a> <a href="/tags/移动端/" style="font-size: 15px;">移动端</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/01/12/前端网络/">前端网络</a>
+          </li>
+        
+          <li>
+            <a href="/2020/07/15/vue/">vue项目运行后，在IE浏览器打开，页面为空白</a>
+          </li>
+        
+          <li>
+            <a href="/2020/07/15/ts-interfaces/">TS - interfaces  初探</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/21/promise/">promise的简单理解</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/13/react基础（一）/">react基础（一）</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 火星上的飞猫<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/tags" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

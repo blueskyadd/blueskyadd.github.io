@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>基于HBuilder 开发 项目之微信支付 | 飞猫</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="@(HBuilder)[微信支付 |vue] 此项目是基于vue开发的一款移动端app,然后基于HBuilder进行打包成apk文件。 一 、用户申请微信开放平台申请移动应用首先进入微信开放平台,如果有账号的话直接登录，没有的话则根据步骤申请一个账号">
+<meta name="keywords" content="微信">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基于HBuilder 开发 项目之微信支付">
+<meta property="og:url" content="39.98.222.100/2019/07/20/weixinPay/index.html">
+<meta property="og:site_name" content="飞猫">
+<meta property="og:description" content="@(HBuilder)[微信支付 |vue] 此项目是基于vue开发的一款移动端app,然后基于HBuilder进行打包成apk文件。 一 、用户申请微信开放平台申请移动应用首先进入微信开放平台,如果有账号的话直接登录，没有的话则根据步骤申请一个账号">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://pay.weixin.qq.com/wiki/doc/api/img/chapter8_5_3.png">
+<meta property="og:updated_time" content="2019-12-23T09:27:21.940Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="基于HBuilder 开发 项目之微信支付">
+<meta name="twitter:description" content="@(HBuilder)[微信支付 |vue] 此项目是基于vue开发的一款移动端app,然后基于HBuilder进行打包成apk文件。 一 、用户申请微信开放平台申请移动应用首先进入微信开放平台,如果有账号的话直接登录，没有的话则根据步骤申请一个账号">
+<meta name="twitter:image" content="https://pay.weixin.qq.com/wiki/doc/api/img/chapter8_5_3.png">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+<link rel="alternate" href="/atom.xml" title="飞猫" type="application/atom+xml">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">飞猫</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/tags">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="39.98.222.100"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-weixinPay" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/07/20/weixinPay/" class="article-date">
+  <time datetime="2019-07-20T00:43:57.000Z" itemprop="datePublished">2019-07-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      基于HBuilder 开发 项目之微信支付
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>@(HBuilder)[微信支付 |vue]</p>
+<p>此项目是基于vue开发的一款移动端app,然后基于HBuilder进行打包成apk文件。</p>
+<h4 id="一-、用户申请微信开放平台申请移动应用"><a href="#一-、用户申请微信开放平台申请移动应用" class="headerlink" title="一 、用户申请微信开放平台申请移动应用"></a>一 、用户申请微信开放平台申请移动应用</h4><h5 id="首先进入微信开放平台-如果有账号的话直接登录，没有的话则根据步骤申请一个账号"><a href="#首先进入微信开放平台-如果有账号的话直接登录，没有的话则根据步骤申请一个账号" class="headerlink" title="首先进入微信开放平台,如果有账号的话直接登录，没有的话则根据步骤申请一个账号"></a>首先进入<a href="https://open.weixin.qq.com/" target="_blank" rel="noopener">微信开放平台</a>,如果有账号的话直接登录，没有的话则根据步骤申请一个账号</h5><a id="more"></a>
+<ul>
+<li><strong>登陆注册</strong> ：首先进入<a href="https://open.weixin.qq.com/" target="_blank" rel="noopener">微信开放平台</a>,如果有账号的话直接登录，没有的话则根据步骤申请一个账号</li>
+<li><strong>创建应用</strong> ：可以根据提示一步一步操作</li>
+</ul>
+<blockquote>
+<p><strong>注意：</strong>申请时需要用到app的包名和应用签名。<br>    <strong><strong>应用包名：</strong></strong> 是在APP项目配置文件AndroidManifest.xml中声明的package值.<br>    <strong><strong>应用签名：</strong></strong> 根据项目的应用包名和编译使用的keystore. 可由<a href="https://open.weixin.qq.com/zh_CN/htmledition/res/dev/download/sdk/Gen_Signature_Android.apk" target="_blank" rel="noopener">签名工具</a>生成一个32位的md5串，我们将打包好的app（配有证书文件的前提）装在手机上，记住打包时需配置appID。打包时的具体流程详细配  置这里不再一一说明，如图所示<br><img src="https://pay.weixin.qq.com/wiki/doc/api/img/chapter8_5_3.png" alt="avatar"><br>另外也支持 <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="noopener">Java JDK</a> 来生成MD5 签名,下载完双击安装。<strong><em>注意！！！此处有坑</em></strong>  Java JDK高版本的工具只能生成SHA1和SHA256这俩个微信支付用不了，，，所以请看清楚版本(推荐下载的版本为jdk-6u43-windows)<br>安装完成后以管理员身份进入Java下的bin目录，<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd C:\Program Files (x86)\Java\jdk1.8.0_144\bin</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>输入命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">keytool -genkey -v -keystore debug.keystore -alias androiddebugkey -keyalg RSA -validity 10000</span><br></pre></td></tr></table></figure></p>
+<p>然后查看生成的证书文件debug.keystore</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">keytool -list -v -keystore debug.keystore</span><br></pre></td></tr></table></figure>
+<p>到这里签名就成功了</p>
+<p>到此为止</p>
+<h5 id="到此为止申请流程走通可以等待微信支付审核通过。"><a href="#到此为止申请流程走通可以等待微信支付审核通过。" class="headerlink" title="到此为止申请流程走通可以等待微信支付审核通过。"></a>到此为止申请流程走通可以等待微信支付审核通过。</h5><h4 id="二、调用HBuilder的-plus模块"><a href="#二、调用HBuilder的-plus模块" class="headerlink" title="二、调用HBuilder的 plus模块"></a>二、调用HBuilder的 plus模块</h4><pre><code>支付一共分为两步首先是获取手机的支付通道，这里的支付通道是我们在HBuilder 打包时所配置的支付模块
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">	// 获取支付通道  </span><br><span class="line">    plus.payment.getChannels(function(channels) &#123;  </span><br><span class="line">    //channel就是我们获取到的支付通道信息</span><br><span class="line">        var txt = &apos;支付通道信息：&apos;;  </span><br><span class="line">            for(var i in channels) &#123;  </span><br><span class="line">                var channel = channels[i];  </span><br><span class="line">                if(channel.id == &apos;qhpay&apos; || channel.id == &apos;qihoo&apos;) &#123; // 过滤掉不支持的支付通道</span><br><span class="line">                    continue;  </span><br><span class="line">                &#125;  </span><br><span class="line">            &#125;</span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;, function(e) &#123;  </span><br><span class="line">        ddsd.log(&apos;获取支付通道失败：&apos; + e.message);  </span><br><span class="line">    &#125;);  </span><br><span class="line">&#125;  </span><br><span class="line">```	</span><br><span class="line"></span><br><span class="line">		子商户调用“服务商提供的接口”返回支付数据，在APP发起支付</span><br><span class="line">参数示例如下</span><br><span class="line">&lt;img width=400 src=&quot;https://blueskyadd.github.io/myPicture/wxpay.png&quot; &gt;</span><br><span class="line">	拿到参数后调取plus 模块 的支付</span><br></pre></td></tr></table></figure>
+<p>plus.payment.request(pays, order, function(result) {<br>   //支付成功回调<br>}, function(e) {<br>    //支付失败回调<br>});<br><code>`</code></p>
+<h5 id="参数说明"><a href="#参数说明" class="headerlink" title="参数说明"></a>参数说明</h5><blockquote>
+<p><strong><strong>pays</strong></strong> 参数为上面获取到的支付通道里的对象，，， 治理再调用微信支付时进行具体判断拿到参数对象<br><strong><strong>order</strong></strong>就是我们通过后台数据拿到的订单信息，切记转为字符串格式 </p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="39.98.222.100/2019/07/20/weixinPay/" data-id="ckn4dohni0015ccu38swokvuy" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/微信/">微信</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/07/25/relaseAndroid/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          如何将Android App 发布到 腾讯应用宝
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/05/31/bat/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">bat文件执行 npm run dev</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/categories/">categories</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/tags/">tags</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Element-ui/">Element-ui</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Express/">Express</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/H5/">H5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HBuilder/">HBuilder</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/express/">express</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mongodb/">mongodb</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ts/">ts</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/">vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/微信/">微信</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/移动端/">移动端</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/Element-ui/" style="font-size: 10px;">Element-ui</a> <a href="/tags/Express/" style="font-size: 10px;">Express</a> <a href="/tags/H5/" style="font-size: 10px;">H5</a> <a href="/tags/HBuilder/" style="font-size: 10px;">HBuilder</a> <a href="/tags/express/" style="font-size: 10px;">express</a> <a href="/tags/mongodb/" style="font-size: 10px;">mongodb</a> <a href="/tags/node/" style="font-size: 20px;">node</a> <a href="/tags/ts/" style="font-size: 10px;">ts</a> <a href="/tags/vue/" style="font-size: 15px;">vue</a> <a href="/tags/微信/" style="font-size: 15px;">微信</a> <a href="/tags/移动端/" style="font-size: 15px;">移动端</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/01/12/前端网络/">前端网络</a>
+          </li>
+        
+          <li>
+            <a href="/2020/07/15/vue/">vue项目运行后，在IE浏览器打开，页面为空白</a>
+          </li>
+        
+          <li>
+            <a href="/2020/07/15/ts-interfaces/">TS - interfaces  初探</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/21/promise/">promise的简单理解</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/13/react基础（一）/">react基础（一）</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 火星上的飞猫<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/tags" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
