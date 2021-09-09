@@ -11,14 +11,14 @@ function loadMainJs($, moment, ClipboardJS, config) {
     });
 
     if (typeof $.fn.lightGallery === 'function') {
-        $('.article').lightGallery({selector: '.gallery-item'});
+        $('.article').lightGallery({ selector: '.gallery-item' });
     }
     if (typeof $.fn.justifiedGallery === 'function') {
         if ($('.justified-gallery > p > .gallery-item').length) {
             $('.justified-gallery > p > .gallery-item').unwrap();
         }
         // 调整gallery图片渲染尺寸
-        $('.justified-gallery').justifiedGallery({rowHeight: 230, margins: 4});
+        $('.justified-gallery').justifiedGallery({ rowHeight: 230, margins: 4 });
     }
 
     if (typeof moment === 'function') {
