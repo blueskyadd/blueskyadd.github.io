@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>深入理解URL - 飞猫</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="飞猫"><meta name="msapplication-TileImage" content="https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/favicon.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="飞猫"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="📢📢📢url就是因特资源网的标准化名称。URL指向一条电子信息片段，告诉你它们位于何处，以及如何与之进行交互                                                                               ——《http权威指南》  📚 1、URL和URI说起URL,我们不得不提起URI。URI是一类更通用的资源标识符，URL实"><meta property="og:type" content="blog"><meta property="og:title" content="火星上的飞猫"><meta property="og:url" content="https://blueskyadd.github.io/"><meta property="og:site_name" content="火星上的飞猫"><meta property="og:description" content="📢📢📢url就是因特资源网的标准化名称。URL指向一条电子信息片段，告诉你它们位于何处，以及如何与之进行交互                                                                               ——《http权威指南》  📚 1、URL和URI说起URL,我们不得不提起URI。URI是一类更通用的资源标识符，URL实"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/avatar.png"><meta property="article:published_time" content="2022-02-22T14:12:42.000Z"><meta property="article:modified_time" content="2022-08-02T14:18:25.657Z"><meta property="article:author" content="blueskyadd"><meta property="article:tag" content="http"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/avatar.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://blueskyadd.github.io/2022/02/22/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3URL/"},"headline":"飞猫","image":[],"datePublished":"2022-02-22T14:12:42.000Z","dateModified":"2022-08-02T14:18:25.657Z","author":{"@type":"Person","name":"火星上的飞猫"},"description":"📢📢📢url就是因特资源网的标准化名称。URL指向一条电子信息片段，告诉你它们位于何处，以及如何与之进行交互                                                                               ——《http权威指南》  📚 1、URL和URI说起URL,我们不得不提起URI。URI是一类更通用的资源标识符，URL实"}</script><link rel="canonical" href="https://blueskyadd.github.io/2022/02/22/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3URL/"><link rel="icon" href="https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/favicon.png"><meta name="referrer" content="no-referrer-when-downgrade"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css?family=Ubuntu:400,600|Source+Code+Pro|Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Microsoft YaHei:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&amp;amp;subset=latin,latin-ext|Inconsolata|Itim|Lobster.css"><script src="https://cdnjs.loli.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="/js/globalUtils.js"></script><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/pace/1.0.2/pace.min.js"></script><link rel="stylesheet" href="/live2d/waifu.css"><script type="text/javascript" async src="/live2d/autoload.js"></script><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="飞猫" type="application/atom+xml">
+</head><body class="is-3-column has-navbar-fixed-top"><nav class="navbar navbar-main is-fixed-top"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/logo.png" alt="飞猫" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">前端</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a><a class="navbar-item" href="/album">相册</a><a class="navbar-item" href="/friend">友链</a><a class="navbar-item" href="/message">留言</a><a class="navbar-item" href="/self-talking">随笔</a><a class="navbar-item" href="/music">音乐</a><a class="navbar-item" href="/media">影音</a><a class="navbar-item" href="/travel">旅行</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Join Gitter" href="https://gitter.im/hexo-theme-amazing/community"><i class="fab fa-gitter"></i></a><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/removeif/hexo-theme-amazing"><i class="fab fa-github"></i></a><a class="navbar-item search" title="Suche" href="javascript:;"><i class="fas fa-search"></i></a><a class="navbar-item" id="night-nav" title="Night Mode" href="javascript:;"><i class="fas fa-moon" id="night-icon"></i></a></div></div></div></nav><script type="text/javascript" src="/js/theme-setting.js"></script><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-9-widescreen"><!--!--><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2022-02-22  <a class="commentCountImg" href="/2022/02/22/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3URL/#comment-container"><span class="display-none-class">61b4771397ce8e58d805450dbe7a5363</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="61b4771397ce8e58d805450dbe7a5363">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>17 m  <i class="fas fa-pencil-alt"> </i>2.5 k</span><span class="level-item" id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span>&nbsp;Besuche</span></div></div><h1 class="title is-3 is-size-4-mobile">深入理解URL</h1><div class="content"><blockquote>
+<p>📢📢📢url就是因特资源网的标准化名称。URL指向一条电子信息片段，告诉你它们位于何处，以及如何与之进行交互                                                                               ——《http权威指南》</p>
+</blockquote>
+<h3 id="📚-1、URL和URI"><a href="#📚-1、URL和URI" class="headerlink" title="📚 1、URL和URI"></a>📚 1、URL和URI</h3><p>说起URL,我们不得不提起URI。URI是一类更通用的资源标识符，URL实际上是它的一个子集。URI包含URL和URN，URL是通过资源位置来标识资源的，而URN是通过名字来识别资源的。那么这三者的关系，就类似我我们身份证上的身份证号、家庭住址、姓名。</p>
+<p>虽然规范的做法是URI作为统一资源标识符，但是在http中只处理了URL，那么我们就来看看我们熟悉的URL<br><span id="more"></span></p>
+<h3 id="📚-2、url的组成"><a href="#📚-2、url的组成" class="headerlink" title="📚 2、url的组成"></a>📚 2、url的组成</h3><p>每天上网的我们，几乎每天都会打开几十个网页，这些网页都会有一个唯一的URL地址。我们可以通过这个地址来找到网页，那么这个地址中都包含哪些信息呢？它是如何与浏览器、客户端、服务器以及服务器文件系统中位置进行关联的🤸‍♂️ \<br>举个例子🌰 \<br>比如 我们要看阮大大的文章🥴<p><a target="_blank" rel="noopener" href="https://www.bookstack.cn/read/html-tutorial/docs-url.md">https://www.bookstack.cn/read/html-tutorial/docs-url.md</a></p> 那么这个URL就分为以下三个部分。</p>
+<ul>
+<li>URL的第一部分（https）是URL的方案（scheme）。方案可以告知Web客户端怎样访问资源。在这个例子中，URL说明要使用https协议。</li>
+<li>URL的第二个部分（<a target="_blank" rel="noopener" href="http://www.bookstack.cn）">www.bookstack.cn）</a> 指的是服务器的位置。这部分告知Web客户端资源位于何处。</li>
+<li>URL的第三个部分（/read/html-tutorial/docs-url.md）是资源路径。历经说明了请求的是服务器上的哪个特定的本地资源。</li>
+</ul>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/cf80052dc9ac40c1a621a82f17e921c7~tplv-k3u1fbpfcp-watermark.image" alt="image.png"></p>
+<p>其实URL最主要的组成也就是这三部分<code>方案（scheme）</code>、<code>主机（host）</code>、<code>路径（path）</code>。但其实URL是由于9部分组成的，我们一起来看下面这个表格</p>
+<table>
+<thead>
+<tr>
+<th>组件</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>scheme</td>
+<td>方法描述了请求资源时用了什么协议，用“:”与url其它部分隔开；</td>
+</tr>
+<tr>
+<td>password</td>
+<td>密码描述了用户名后面可能跟的密码，用“:”跟用户名隔开；</td>
+</tr>
+<tr>
+<td>host</td>
+<td>主机描述了网站主机名或ip地址，如果前面有用户名和密码，用@分开；</td>
+</tr>
+<tr>
+<td>post</td>
+<td>服务器当前正在监听的端口，http默认为80，https默认为443;</td>
+</tr>
+<tr>
+<td>path</td>
+<td>路劲描述了资源在服务器上的位置，用‘/’跟前面部分隔开；</td>
+</tr>
+<tr>
+<td>params</td>
+<td>参数描述了请求需要附加的参数，用“;”与其他部分隔开；</td>
+</tr>
+<tr>
+<td>query</td>
+<td>查询是用来激活服务器程序去执行某些操作，比如查询数据库等，用“?”与其余部分隔开；</td>
+</tr>
+<tr>
+<td>frag</td>
+<td>片段只在客户端使用，不发送到服务器端</td>
+</tr>
+</tbody>
+</table>
+<p>那么接下来我们来看几个我们实际开发常用的几个组件</p>
+<h4 id="📕-2-1-方案"><a href="#📕-2-1-方案" class="headerlink" title="📕 2.1 方案"></a>📕 2.1 方案</h4><p>方案实际上是规定如何访问指定资源的主要标识，它会负责解析URL的应用程序应该是用什么协议，我们比较常见的就是HTTP、HTTPS。一共有如下几种方案</p>
+<ul>
+<li>http</li>
+<li>https</li>
+<li>mailto</li>
+<li>ftp</li>
+<li>rtsp、rtspu</li>
+</ul>
+<h4 id="📗-2-2-主机和端口"><a href="#📗-2-2-主机和端口" class="headerlink" title="📗 2.2 主机和端口"></a>📗 2.2 主机和端口</h4><p>我们想要从因特网上获取资源，就必须要知道是哪台机器，以及在那台机器的什么地方可以找到能对目标资源进行访问的服务器。URL的主机和端口就提供了这个信息。\<br>我们可以通过主机名或者IP地址来访问， 其实在前端使用框架开发的话，由于本地启动的服务，那其实我们访问的就是本机的IP地址。</p>
+<h4 id="📘-2-3-路径"><a href="#📘-2-3-路径" class="headerlink" title="📘 2.3 路径"></a>📘 2.3 路径</h4><p>URL的路径组件说明了资源位于服务器的什么地方。路径通常很像一个分级的文件系统路径。<br/><br>🌰比如：</p>
+<p><a target="_blank" rel="noopener" href="https://www.bookstack.cn/read/html-tutorial/docs-url.md">https://www.bookstack.cn/read/html-tutorial/docs-url.md</a></p>🤸‍<br><br>这个URL中的路径为/html-tutorial/docs-url.md，很像UNIX文件系统中的文件系统路径。路径是服务器定位资源时所需的信息。<br><br><h4>📙 2.4 参数</h4><br>对很多方案来说，只有简单的主机名和到达对象的路径是不够的。除了服务器正在监听的端口，以及是否能够通过用户名和密码访问资源外，很多协议都还需要更多的信息才能工作。<br><br><strong>为了向应用程序提供它们所需的输入参数，以便正确地与服务器进行交互，URL中有一个参数组件。</strong><br>这个组件就是URL中的名值对列表，由字符“; ”将其与URL的其余部分（以及各名值对）分隔开来。它们为应用程序提供了访问资源所需的所有附加信息。<br><br><h4>📒 2.5 查找字符串</h4><br>查找字符串，我们在日常开发中有经常使用。比如说我们从商品列表跳转商品详情时，会将商品ID传递到商品详情页面，然后通过商品ID来获取商品详情。\<br>🌰举个例子：<br><p><a target="_blank" rel="noopener" href="https://search.bilibili.com/all?keyword=哈利波特&amp;from_source=webtop_search&amp;spm_id_from=333.851">https://search.bilibili.com/all?keyword=哈利波特&amp;from_source=webtop_search&amp;spm_id_from=333.851</a></p>
+
+<p>🤸‍我们在哔哩哔哩上搜索哈利波特，按下回车我们会的到上面的URL，这个URL的大部分都与我们见过的其他URL类似。只有问号（?）右边的内容是新出现的。这部分被称为<code>查询（query）组件</code>。URL的查询组件和标识网关资源的URL路径组件一起被发送给网关资源。<br>上个链接中，我们获取到三个参数，<code>keyword</code>、<code>from_source</code>、<code>spm_id_from</code>,按照常规，很多网关都希望查询字符串以一系列“名/值”对的形式出现，名值对之间用字符“&amp;”分隔 </p>
+<h4 id="📗-2-6-片段"><a href="#📗-2-6-片段" class="headerlink" title="📗 2.6 片段"></a>📗 2.6 片段</h4><p>为了引用部分资源或资源的一个片段，URL支持使用片段（frag）组件来表示一个资源内部的片段。\<br>在日常开发中，我们也称之为<code>锚点（anchor）</code> ，它是网页内部的定位点，使用<code>#</code>加上锚点名称，放在网址的最后，比如<code>#anchor</code>。浏览器加载页面以后，会自动滚动到锚点所在的位置。 </p>
+<p>HTTP服务器通常只处理整个对象，而不是对象的片段，客户端不能将片段传送给服务器。浏览器从服务器获得了整个资源之后，会根据片段来显示你感兴趣的那部分资源。</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5ffa4a0aa46b4bde9394a70f468662dc~tplv-k3u1fbpfcp-watermark.image" alt="image.png"></p>
+<h3 id="📚-3-、url编码"><a href="#📚-3-、url编码" class="headerlink" title="📚 3 、url编码"></a>📚 3 、url编码</h3><h4 id="📙-3-1什么时URL编码"><a href="#📙-3-1什么时URL编码" class="headerlink" title="📙 3.1什么时URL编码"></a>📙 3.1什么时URL编码</h4><p>为了避开安全字符集表示法带来的限制，人们设计了一种编码机制，用来在URL中表示各种不安全的字符。这种编码机制就是通过一种“转义”表示法来表示不安全字符的，这种转义表示法包含一个百分号（%），后面跟着两个表示字符ASCII码的十六进制数。</p>
+<h4 id="📘-3-2-为什么要对URL进行编码"><a href="#📘-3-2-为什么要对URL进行编码" class="headerlink" title="📘 3.2 为什么要对URL进行编码"></a>📘 3.2 为什么要对URL进行编码</h4><p>通常如果一样东西需要编码，说明这样东西并不适合传输。原因多种多样，如<code>Size</code>过大，包含隐私数据，对于Url来说，之所以要进行编码，是因为以下两种原因：</p>
+<ol>
+<li><p>http协议规定请求头与请求行必须是<code>ascii编码</code>，这也就是说你不能在Url中包含任何非<code>ASCII字符</code>，例如中文。这一部分的编解码任务<code>encodeURI</code>、<code>decodeURL</code>就能完成，而事实上浏览器跟web服务器一般都帮我们做了。</p>
+</li>
+<li><p>url中部分内容包含不安全字符，比如，Url参数字符串中使用<code>key=value</code>键值对这样的形式来传参，键值对之间以&amp;符号分隔，如<code>/s?q=abc&amp;ie=utf-8</code>。如果你的value字符串中包含了=或者&amp;，那么势必会造成接收Url的服务器解析错误，因此必须将引起歧义的&amp;和=符号进行转义，也就是对其进行编码。这一部分可以用<code>encodeURIComponent</code>完成，解码后台服务器自动完成</p>
+</li>
+</ol>
+<p>但是服务器并不会对url进行编码，服务器不可能对错综复杂的编码结果进行处理，所以，需要使用Javascript先对URL编码，然后再向服务器提交，不给浏览器插手的机会。</p>
+<h4 id="📗-3-3-js对url进行编码和解码"><a href="#📗-3-3-js对url进行编码和解码" class="headerlink" title="📗 3.3 js对url进行编码和解码"></a>📗 3.3 js对url进行编码和解码</h4><p>以下三种函数都可以对URL进行编码，区别主要在于不编码的字符不同，具体使用详见各自的使用场景：</p>
+<p>📃  <strong>1.escape 和 unescape</strong></p>
+<pre><code>对除ASCII字母、数字、标点符号 @  *  _  +  -  .  / 以外的其他字符进行编码。
+</code></pre><p>📄 <strong>2. encodeURI 和 decodeURI</strong></p>
+<pre><code>返回编码为有效的统一资源标识符 (URI) 的字符串，不会被编码的字符：! @ # $ &amp; * ( ) = : / ; ? + &apos;
+encodeURI()是Javascript中真正用来对URL编码的函数。
+</code></pre><p>📑 <strong>3. encodeURIComponent 和 decodeURIComponent</strong></p>
+<pre><code>对URL的组成部分进行个别编码，而不用于对整个URL进行编码
+</code></pre></div><div class="article-licensing box"><div class="licensing-title"><p>深入理解URL</p><p><a href="https://blueskyadd.github.io/2022/02/22/深入理解URL/">https://blueskyadd.github.io/2022/02/22/深入理解URL/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>Author</h6><a href="https://blueskyadd.github.io"><p>火星上的飞猫</p></a></div></div><div class="level-item is-narrow"><div><h6>Posted on</h6><p>2022-02-22</p></div></div><div class="level-item is-narrow"><div><h6>Updated on</h6><p>2022-08-02</p></div></div><div class="level-item is-narrow"><div><h6>Licensed under</h6><p><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a class="icon" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a><a class="icon" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="recommend-area"><div class="recommend-post"><span class="is-size-6 has-text-grey has-mr-7"># Related Post</span><br><span>  1.<a class="is-size-6" href="/2022/07/24/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E6%B5%81%E7%A8%8B/" target="_blank">浏览器渲染流程</a><br></span><span>  2.<a class="is-size-6" href="/2022/05/26/%E6%95%B0%E6%8D%AE%E5%8C%85%E6%98%AF%E5%A6%82%E4%BD%95%E5%AE%8C%E6%95%B4%E7%9A%84%E5%8F%91%E9%80%81%E5%88%B0%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F/" target="_blank">数据包是如何完整的发送到应用程序</a><br></span><span>  3.<a class="is-size-6" href="/2022/05/09/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B/" target="_blank">浏览器的进程和线程</a><br></span><span>  4.<a class="is-size-6" href="/2022/04/19/%E9%87%8D%E5%AE%9A%E5%90%91%E4%B8%8E%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/" target="_blank">重定向与负载均衡</a><br></span><span>  5.<a class="is-size-6" href="/2022/03/27/jwt%E9%89%B4%E6%9D%83%E6%9C%BA%E5%88%B6/" target="_blank">jwt鉴权机制</a><br></span><span>  6.<a class="is-size-6" href="/2022/03/05/JS%E6%A8%A1%E5%9D%97%E5%8C%96/" target="_blank">JS模块化</a><br></span><span>  7.<a class="is-size-6" href="/2022/01/22/HTTP%E6%8A%A5%E6%96%87%E6%98%AF%E4%BB%80%E4%B9%88/" target="_blank">HTTP报文是什么</a><br></span><span>  8.<a class="is-size-6" href="/2021/11/10/React%20SSR%20%E7%9A%84%E5%AE%9E%E7%8E%B0/" target="_blank">React SSR 的实现</a><br></span></div></div><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/social-share.js/1.0.16/css/share.min.css"><div class="social-share"></div><script src="https://cdnjs.loli.net/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">Gefällt Ihnen der Artikel? Unterstützen Sie den Autor mit</h3><div class="buttons is-centered"><a class="button donate" data-type="alipay"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>Alipay</span><span class="qrcode"><img src="https://raw.githubusercontent.com/removeif/blog_image/master/img/2019/20190802135456.png" alt="Alipay"></span></a><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>Wechat</span><span class="qrcode"><img src="https://raw.githubusercontent.com/removeif/blog_image/master/img/2019/20190802135550.png" alt="Wechat"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2022/03/05/JS%E6%A8%A1%E5%9D%97%E5%8C%96/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">JS模块化</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2022/01/22/HTTP%E6%8A%A5%E6%96%87%E6%98%AF%E4%BB%80%E4%B9%88/"><span class="level-item">HTTP报文是什么</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--><div class="card"><div class="card-content"><div class="title is-5">Kommentare</div><div id="comment-container"></div><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/gitalk/1.6.0/gitalk.css"><script> $.getScript('/js/gitalk.min.js', function () { 
+            var gitalk = new Gitalk({
+            language:'zh-CN',
+            id: '61b4771397ce8e58d805450dbe7a5363',
+            repo: 'blueskyadd.github.io',
+            owner: 'blueskyadd',
+            clientID: 'ff2be2cdbc9e2b468c06',
+            clientSecret: 'ed81438221a18738b2c235cfc98658347e08b849',
+            admin: ["blueskyadd"],
+            createIssueManually: true,
+            distractionFreeMode: false,
+            perPage: 10,
+            pagerDirection: 'last',
+            proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token',
+            
+            enableHotKey: true,
+            isLocked: false
+        })
+        gitalk.render('comment-container')});</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1 is-sticky"><!--!--><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/avatar.png" alt="火星上的飞猫"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">火星上的飞猫</p><p class="is-size-6 is-block">尚未执佩剑，转眼即江湖</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>中国</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Seiten</p><a href="/archives"><p class="title">37</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Kategorien</p><a href="/categories"><p class="title">2</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tags</p><a href="/tags"><p class="title">25</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/ppoffice" target="_blank" rel="noopener">Folgen</a></div><div class="level is-mobile"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/removeif"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Weibo" href="https://weibo.com/removeif"><i class="fab fa-weibo"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Email" href="mailto:removeif@163.com"><i class="fa fa-envelope"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Next" href="https://removeif.github.io/remove.io"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/atom.xml"><i class="fas fa-rss"></i></a></div><div><hr><p id="hitokoto">:D 一言句子获取中...</p><script type="text/javascript" defer>function getYiyan(){
+                                $.getJSON("https://v1.hitokoto.cn/", function (data) {
+                                if(data){
+                                    $('#hitokoto').html("");
+                                    $('#hitokoto').append("<strong style='color: #3273dc;'>"+data.hitokoto+"</strong>"+
+                                    "<p>"+"From《"+data.from+"》</p><p>Provider-"+data.creator+"</p>");
+                                }});}
+                                $(function (){getYiyan();$('#hitokoto').click(function(){getYiyan();})});</script></div></div></div><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">Links</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><h3 class="menu-label">Latest Comment</h3><span class="body_hot_comment">Loading...Wait a Minute!</span></div></div><div class="card widget"><div class="card-content"><h3 class="menu-label">Letzte Einträge</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-07-24T05:56:57.000Z">2022-07-24</time></p><p class="title"><a href="/2022/07/24/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E6%B5%81%E7%A8%8B/">浏览器渲染流程</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-05-26T05:54:51.000Z">2022-05-26</time></p><p class="title"><a href="/2022/05/26/%E6%95%B0%E6%8D%AE%E5%8C%85%E6%98%AF%E5%A6%82%E4%BD%95%E5%AE%8C%E6%95%B4%E7%9A%84%E5%8F%91%E9%80%81%E5%88%B0%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F/">数据包是如何完整的发送到应用程序</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-05-09T05:52:24.000Z">2022-05-09</time></p><p class="title"><a href="/2022/05/09/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B/">浏览器的进程和线程</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-04-19T05:50:56.000Z">2022-04-19</time></p><p class="title"><a href="/2022/04/19/%E9%87%8D%E5%AE%9A%E5%90%91%E4%B8%8E%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/">重定向与负载均衡</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-03-27T05:48:31.000Z">2022-03-27</time></p><p class="title"><a href="/2022/03/27/jwt%E9%89%B4%E6%9D%83%E6%9C%BA%E5%88%B6/">jwt鉴权机制</a></p></div></article></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">Kategorien</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/categories/categories/"><span class="level-start"><span class="level-item">categories</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/tags/"><span class="level-start"><span class="level-item">tags</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">Archive</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/archives/2022/07/"><span class="level-start"><span class="level-item">July 2022</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2022/05/"><span class="level-start"><span class="level-item">May 2022</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2022/04/"><span class="level-start"><span class="level-item">April 2022</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2022/03/"><span class="level-start"><span class="level-item">March 2022</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2022/02/"><span class="level-start"><span class="level-item">February 2022</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><a class="level is-mobile is-marginless" href="/archives/"><span class="level-start"><span class="level-item">查看全部&gt;&gt;</span></span></a></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">Tags</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/node/"><span class="tag">node</span><span class="tag is-grey-lightest">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/"><span class="tag">浏览器工作原理</span><span class="tag is-grey-lightest">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/http/"><span class="tag">http</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/javascript/"><span class="tag">javascript</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/react/"><span class="tag">react</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/vue/"><span class="tag">vue</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BE%AE%E4%BF%A1/"><span class="tag">微信</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF/"><span class="tag">移动端</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Android/"><span class="tag">Android</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Element-ui/"><span class="tag">Element-ui</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Express/"><span class="tag">Express</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/H5/"><span class="tag">H5</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/HBuilder/"><span class="tag">HBuilder</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Next/"><span class="tag">Next</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/express/"><span class="tag">express</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/hooks/"><span class="tag">hooks</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/jwt/"><span class="tag">jwt</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/mongodb/"><span class="tag">mongodb</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ts/"><span class="tag">ts</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/"><span class="tag">单元测试</span><span class="tag is-grey-lightest">1</span></a></div></div><div class="field is-grouped is-grouped-multiline"><a class="tags has-addons" href="/tags/"><span class="tag">查看全部&gt;&gt;</span></a></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">Abonnieren Sie Updates</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="Abonnieren"></div></div></form></div></div></div><!--!--><div class="column-right-shadow is-hidden-widescreen"></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/logo.png" alt="飞猫" height="28"></a><p class="size-small"><span>&copy; 2022 火星上的飞猫</span>  Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a> &amp; <a href="https://github.com/removeif/hexo-theme-amazing" target="_blank">Amazing</a> <br><span>© <a href="http://www.beian.miit.gov.cn/" target="_blank">川ICP备88888888号-8（测试）</a><br></span><span>© 版权说明：[本网站所有内容均收集于互联网或自己创作,<br />&nbsp;&nbsp;&nbsp;&nbsp;方便于网友与自己学习交流，如有侵权，请<a href="/message" target="_blank">留言</a>，立即处理]<br /></span><span><span id="statistic-times">loading...</span><script>function createTime(time) {
+            var n = new Date(time);
+            now.setTime(now.getTime() + 250),
+                days = (now - n) / 1e3 / 60 / 60 / 24,
+                dnum = Math.floor(days),
+                hours = (now - n) / 1e3 / 60 / 60 - 24 * dnum,
+                hnum = Math.floor(hours),
+            1 == String(hnum).length && (hnum = "0" + hnum),
+                minutes = (now - n) / 1e3 / 60 - 1440 * dnum - 60 * hnum,
+                mnum = Math.floor(minutes),
+            1 == String(mnum).length && (mnum = "0" + mnum),
+                seconds = (now - n) / 1e3 - 86400 * dnum - 3600 * hnum - 60 * mnum,
+                snum = Math.round(seconds),
+            1 == String(snum).length && (snum = "0" + snum),
+                document.getElementById("statistic-times").innerHTML = "❤️Site from <strong>"+time.split(" ")[0].replace(/\//g,".")+"</strong> has existed <strong>" + dnum + "</strong> d <strong>" + hnum + "</strong> h <strong>" + mnum + "</strong> m <strong>" + snum + "</strong> s！❤️";
+        }var now = new Date();setInterval("createTime('2018/11/11 00:00:00')", 250,"");</script><br></span><div class="size-small"><span>❤️Thx <strong><span id="busuanzi_value_site_uv">99+</span></strong> users <strong><span id="busuanzi_value_site_pv">99+</span></strong> visited！❤️</span></div></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/removeif/hexo-theme-amazing"><i class="fab fa-github"></i></a></p></div><div class="sideMusic"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="/js/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script><meting-js style="width: auto;height: 2000px;" server="netease" type="playlist" id="2364053447" theme="#2980b9" loop="all" autoplay="false" order="list" storageName="aplayer-setting" lrctype="0" list-max-height="400px" fixed="true"></meting-js></div></div></div></div></footer><script src="https://cdnjs.loli.net/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script><script src="https://cdnjs.loli.net/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" async></script><script>moment.locale("zh-Hans");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="Zurück nach oben" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/js/lightgallery.min.js" defer></script><script src="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><script>$.getScript('/js/comment-issue-data.js',function(){loadIssueData('ff2be2cdbc9e2b468c06','ed81438221a18738b2c235cfc98658347e08b849','blueskyadd','blueskyadd.github.io',false);})</script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="Tippen Sie etwas..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"Tippen Sie etwas...","untitled":"(Ohne Titel)","posts":"Seiten","pages":"Pages","categories":"Kategorien","tags":"Tags"});
+        });</script><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script><script type="text/javascript">var pjax = new Pjax({
+            elements: "a",//代表点击链接就更新
+            selectors: [  //代表要更新的节点
+                ".section",
+                "title"
+            ],
+            cache: true,
+            cacheBust:false
+        })
+
+        function loadBusuanzi(){
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js", function () {});
+        }
+
+        function loadMathJax() { //加载mathjax
+            $.getScript("//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML", function () {
+                MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'], ['\(', '\)']] } });
+                var math = document.getElementsByClassName("entry-content")[0];
+                MathJax.Hub.Queue(["Typeset", MathJax.Hub, math]);
+            });
+        };
+
+        // 开始 PJAX 执行的函数
+        document.addEventListener('pjax:send', function () {
+        });
+        
+        // PJAX 完成之后执行的函数，可以和上面的重载放在一起
+        document.addEventListener('pjax:complete', function () {
+            $(".section").css({opacity:1});
+            if(true){
+                $.getScript('/js/comment-issue-data.js',function(){loadIssueData('ff2be2cdbc9e2b468c06','ed81438221a18738b2c235cfc98658347e08b849','blueskyadd','blueskyadd.github.io',false);});
+            }
+            if(false){
+                loadMathJax();
+            }
+            loadMainJs(jQuery, window.moment, window.ClipboardJS, window.IcarusThemeSettings);
+            loadBackTop();
+            loadBusuanzi();
+            if(typeof loadBanner == 'function'){
+                loadBanner();
+            }
+        });</script></body></html>
